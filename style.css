@@ -1,0 +1,464 @@
+ a {
+    font-weight: 100;
+    font-family: serif;
+ } 
+
+ p {
+    color: #757575;
+    font-size: small;
+ }
+
+
+ 
+ ul p {
+    color: rgb(77, 77, 77);
+    font-size: larger;
+    text-align: justify;
+ }
+ 
+
+ .container a {
+    color: rgba(255, 255, 255, 0.801);
+    font-size: x-large;
+    font-style: italic;
+    text-align: center;
+    font-weight: 100;
+    width: 400px;
+ }
+
+
+.container h1 {
+    color: rgb(138, 0, 0);
+    font-family: serif;
+    font-size: 600%;
+}
+
+
+
+
+
+ .parallax-container {
+    height: 50px;
+ }
+
+
+
+ 
+ /* Style for the initial state of the navbar */
+.navbar {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 1s ease;
+    box-shadow: none;
+
+}
+
+.navbar .brand-logo {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    transition: color 0.3s ease;
+    padding-left: 40px;
+}
+
+.navbar .nav-links {
+    color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ /* Default styles for nav-links */
+.nav-links li a {
+    color: white; /* Default text color */
+    display: inline;
+    margin: 0 10px;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+
+}
+
+
+
+/* Style for the scrolled state of the navbar */
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.8); /* Change to your desired background color */
+}
+
+.navbar.scrolled .brand-logo {
+    color: #470202; /* Change to your desired text color */
+    animation: fade 2s ease-in;
+    padding-left: 40px;
+    align-content: center;
+    font-size: 40px;
+}
+
+
+
+/* Styles for nav-links when scrolled */
+.nav-links.scrolled li a {
+    color: #1a1a1a; /* Text color when scrolled */
+    animation: fade 2s ease-out;}
+
+
+    /*
+        .navbar-fixed {
+            background-color: brown;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            transition: background-color 1s ease;
+            box-shadow: none;
+        
+        }
+        
+        .navbar-fixed {
+            background-color: blue;
+
+        }
+    */ 
+
+
+#scroll-icon {
+    font-size: 24px;
+    color: #ffffff; /* Default color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Scrolled icon style */
+.scrolled #scroll-icon {
+    color: rgb(59, 59, 59); /* Scrolled color */
+}
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+ 
+ 
+ 
+ /* Add this CSS for the slideshow container */
+ .slideshow-container {
+    min-width: 100%;
+    max-width: 2400px; /* Set your desired max width */
+    margin: 0 auto; /* Center the container */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Set the aspect ratio (e.g., 16:9) */
+.slideshow-container::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* 9:16 aspect ratio (16 / 9) */
+}
+
+/* Style the images as background images */
+.mySlides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: fade 3s ease-in-out infinite;
+}
+
+/* Add a fade animation */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* SLIDESHOW */
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #8a4b4b; /*dot color*/
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .2} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+/* CARD ON HOVER */ 
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    transition: transform 0.5s;
+}
+
+.card-image:hover img {
+    transform: scale(1.1);
+}
+
+/* paragraph description */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 0, 0, 0.7); /* Maroon with 70% opacity */
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
+}
+
+
+
+
+
+
+/* CARD CAROUSEL */
+.card-panel {
+    display: flex;
+    align-items: center;
+}
+
+.carousel {
+    max-width: 100%;
+}
+
+.carousel .carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.row.equal-height-columns {
+    display: flex;
+    vertical-align: top;
+}
+
+.equal-height-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.equal-height-column .card-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.equal-height-column .carousel-container {
+    flex: 1;
+}
+
+.card .card-image .card-overlay p{
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for the overlay text container ---- currently disabled*/
+.overlay-container {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    z-index: 2;
+    color: white;
+}
+  
+/* Style for the title */
+.title {
+    font-size: 60px;
+    font-weight: 200;
+    font-family: serif;
+}
+
+/* Style for the subtitle */
+.subtitle {
+    font-size: 18px;
+    font-weight: 100;
+    font-family: sans-serif;
+}
+
+/* Style for the lined button */
+.lined-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s;
+    font-weight: 200;
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+
+.lined-button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+
+.input-field {
+    text-align: left;
+}
+.datepicker {
+        text-align: center;
+}
+.timepicker {
+    text-align: center;
+}
+.number {
+    text-align: center;
+}
+
+.input-field .active {
+    background-color: #ffffff00; /*form color*/
+  }
+
+
+
+
+
+
+
+
+
+
+
+  /* ABOUT US */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#closePopup {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
